@@ -12,6 +12,10 @@ try:
     driver.get("https://skleptest.pl/")
 
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(text(), 'Shop')]"))).click()
+    
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(text(), 'Amari Shirt')]"))).click()
+    
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Add to cart')]"))).click()
 
 finally:
     driver.quit()
